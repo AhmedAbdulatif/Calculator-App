@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <!-- displays site properly based on user's device -->
+  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+  <link rel="stylesheet" href="style.css">
+  <script src='https://cdnjs.cloudflare.com/ajax/libs/mathjs/9.2.0/math.js'></script>
+  <title>Calculator app</title>
+</head>
+
+<body>
+  <div class="calculator">
+    <div class="container">
+      <div class="header">
+        <h3>Calc</h3>
+        <div class="theme">
+          <p>THEME</p>
+          <div class="settings">
+            <div class="numbers">
+              <span>1</span>
+              <span>2</span>
+              <span>3</span>
+            </div>
+            <div class="choice">
+              <span class="active" data-theme="first"></span>
+              <span data-theme="second"></span>
+              <span data-theme="third"></span>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="display">
+        <span>0</span>
+      </div>
+      <div class="keys">
+        <div class="key">7</div>
+        <div class="key">8</div>
+        <div class="key">9</div>
+        <div class="key del" style="background-color: var(--blue-key-back); box-shadow: 0 3px var(--blue-key-shadow)">
+          DEL
+        </div>
+        <div class="key">4</div>
+        <div class="key">5</div>
+        <div class="key">6</div>
+        <div class="key">+</div>
+        <div class="key">1</div>
+        <div class="key">2</div>
+        <div class="key">3</div>
+        <div class="key">-</div>
+        <div class="key">.</div>
+        <div class="key">0</div>
+        <div class="key">/</div>
+        <div class="key mul">×</div>
+        <div class="key reset" style="background-color: var(--blue-key-back); box-shadow: 0 3px var(--blue-key-shadow)">
+          Reset
+        </div>
+        <div class="key equal" style="background-color: var(--red-key-back); box-shadow: 0 3px var(--red-key-shadow)">=
+        </div>
+      </div>
+    </div>
+  </div>
+  <script type="text/javascript" src="main.js"></script>
+</body>
+
+</html>

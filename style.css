@@ -1,0 +1,178 @@
+:root {
+    /* Theme 1 */
+    --white-color: hsl(0, 0%, 100%);
+    --toggle-color: hsl(6, 63%, 50%);
+    --key-shadow-red: hsl(6, 70%, 34%);
+    --key-shadow: hsl(28, 16%, 65%);
+    --key-background: hsl(30, 25%, 89%);
+    --blue-key-back: hsl(225, 21%, 49%);
+    --blue-key-shadow: hsl(224, 28%, 35%);
+    --red-key-back: hsl(6, 63%, 50%);
+    --red-key-shadow: hsl(6, 70%, 34%);
+    --main-color-1: hsl(222, 26%, 31%);
+    --sec-color-1: hsl(224, 36%, 15%);
+
+    /* Theme 2 */
+    --main-color-2: rgb(230, 230, 230);
+    --sec-color-2: rgb(237, 237, 237);
+
+    /* Theme 3 */
+    --main-color-3: rgb(22, 6, 40);
+    --text-color-3: rgb(255, 229, 62);
+    --key-back-3: rgb(29, 9, 52);
+    --key-back-3-2: rgb(52, 28, 79);
+    --key-shadow-3: rgb(188, 21, 244);
+    --toggle-back-3: rgb(0, 224, 209);
+    --toggle-shadow-3: rgb(108, 249, 242);
+    --custom-button-3: rgb(88, 7, 125);
+}
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    background-color: hsl(222, 26%, 31%);
+}
+
+
+.calculator .container .header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: transparent;
+    color: var(--white-color);
+    padding: 10px 0;
+}
+
+@media (max-width: 768px) {
+    .calculator .container {
+        width: calc(100% - 20px);
+        margin: 20px auto;
+    }
+}
+
+@media (min-width: 769px) {
+    .calculator .container {
+        width: 400px;
+        margin: 20px auto;
+    }
+}
+
+.calculator .container .header .theme {
+    display: flex;
+    align-items: center;
+    width: 100px;
+    justify-content: flex-end;
+    font-size: 10px;
+}
+
+.calculator .container .header .theme p {
+    margin-right: 20px;
+    font-weight: bold;
+}
+
+
+.calculator .container .header .theme .settings {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+}
+
+.calculator .container .header .theme .settings .numbers {
+    display: flex;
+    width: 100%;
+    justify-content: space-between;
+    padding: 2px 5px;
+}
+
+.calculator .container .header .theme .settings .choice {
+    display: flex;
+    width: 100%;
+    justify-content: space-between;
+    background-color: var(--sec-color-1);
+    padding: 4px 3px;
+    border-radius: 11px;
+    -webkit-border-radius: 11px;
+    -moz-border-radius: 11px;
+    -ms-border-radius: 11px;
+    -o-border-radius: 11px;
+}
+
+.calculator .container .header .theme .settings .choice span {
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    -webkit-border-radius: 50%;
+    -moz-border-radius: 50%;
+    -ms-border-radius: 50%;
+    -o-border-radius: 50%;
+    cursor: pointer;
+    opacity: 0;
+}
+
+.calculator .container .header .theme .settings .choice span.active {
+    opacity: 1;
+    background-color: var(--toggle-color);
+}
+
+.calculator .container .display {
+    height: 100px;
+    margin-bottom: 20px;
+    background-color: var(--sec-color-1);
+    border-radius: 7px;
+    -webkit-border-radius: 7px;
+    -moz-border-radius: 7px;
+    -ms-border-radius: 7px;
+    -o-border-radius: 7px;
+    text-align: end;
+    padding: 0 20px;
+
+}
+
+.calculator .container .display span {
+    color: var(--white-color);
+    font-size: 40px;
+    line-height: 100px;
+    font-weight: bold;
+    max-height: 100%;
+}
+
+.calculator .container .keys {
+    display: grid;
+    gap: 20px;
+    grid-template-columns: repeat(4, 1fr);
+    background-color: var(--sec-color-1);
+    padding: 20px;
+    border-radius: 10px;
+    -webkit-border-radius: 10px;
+    -moz-border-radius: 10px;
+    -ms-border-radius: 10px;
+    -o-border-radius: 10px;
+}
+
+.calculator .container .keys .key {
+    background-color: var(--key-background);
+    padding: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 20px;
+    border-radius: 5px;
+    -webkit-border-radius: 5px;
+    -moz-border-radius: 5px;
+    -ms-border-radius: 5px;
+    -o-border-radius: 5px;
+    cursor: pointer;
+    box-shadow: 0 3px var(--key-shadow);
+    user-select: none;
+    font-weight: bold;
+}
+
+.calculator .container .keys .key:nth-child(17),
+.calculator .container .keys .key:last-child {
+    grid-column: span 2;
+}
